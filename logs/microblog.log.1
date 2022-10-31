@@ -1,106 +1,4 @@
-2022-10-01 19:40:46,747 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-01 19:53:39,750 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-02 21:43:29,398 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-02 21:43:42,617 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-03 15:25:31,421 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-03 16:28:50,563 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-03 16:29:50,343 ERROR: Exception on /user/susan [GET] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
-Traceback (most recent call last):
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "D:\microblog\app\routes.py", line 77, in user
-    return render_template("user.html", user=user, posts=posts, form=form)
-  File "D:\microblog\venv\lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "D:\microblog\venv\lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "D:\microblog\app\templates\user.html", line 14, in template
-    {% elif current_user.is_following(user) %}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'elif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
-2022-10-03 16:31:15,649 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-03 16:31:28,019 ERROR: Exception on /user/susan [GET] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
-Traceback (most recent call last):
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "D:\microblog\app\routes.py", line 77, in user
-    return render_template("user.html", user=user, posts=posts, form=form)
-  File "D:\microblog\venv\lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "D:\microblog\venv\lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "D:\microblog\app\templates\user.html", line 15, in template
-    <form action="{{ url_for('follow'), username=user.username }}" method="post">
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2022-10-03 16:32:08,993 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-03 16:32:18,843 ERROR: Exception on /user/susan [GET] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
-Traceback (most recent call last):
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "D:\microblog\app\routes.py", line 77, in user
-    return render_template("user.html", user=user, posts=posts, form=form)
-  File "D:\microblog\venv\lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "D:\microblog\venv\lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "D:\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "D:\microblog\app\templates\user.html", line 15, in template
-    <form action="{{ url_for('follow'), username=user.username }}" , method="post">
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2022-10-03 16:33:29,519 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
-2022-10-03 16:33:46,380 ERROR: Exception on /follow/susan [POST] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
+2022-10-03 16:37:05,626 ERROR: Exception on /follow/susan [POST] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
 Traceback (most recent call last):
   File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -119,4 +17,126 @@ Traceback (most recent call last):
   File "D:\microblog\app\models.py", line 56, in is_following
     return self.followed.filter(followers.c.followed_id == user.id).count() > 0
 AttributeError: 'str' object has no attribute 'id'
-2022-10-03 16:36:52,442 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
+2022-10-03 16:52:26,446 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
+2022-10-03 16:55:19,874 ERROR: Exception on /follow/susan [POST] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\microblog\app\routes.py", line 108, in follow
+    current_user.follow(username)
+  File "D:\microblog\app\models.py", line 48, in follow
+    if not self.is_following(user):
+  File "D:\microblog\app\models.py", line 57, in is_following
+    return self.followed.filter(followers.c.followed_id == user.id).count() > 0
+AttributeError: 'str' object has no attribute 'id'
+2022-10-03 17:04:52,907 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
+2022-10-03 17:05:01,260 ERROR: Exception on /follow/susan [POST] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\microblog\app\routes.py", line 111, in follow
+    return redirect(url_for("user"), username=username)
+  File "D:\microblog\venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "D:\microblog\venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user'. Did you forget to specify values ['username']?
+2022-10-03 17:10:00,551 INFO: Microblog startup [in D:\microblog\app\__init__.py:52]
+2022-10-11 16:55:28,906 INFO: Microblog startup [in D:\microblog\app\__init__.py:59]
+2022-10-11 16:56:53,854 INFO: Microblog startup [in D:\microblog\app\__init__.py:59]
+2022-10-12 19:25:55,403 INFO: Microblog startup [in D:\microblog\app\__init__.py:89]
+2022-10-12 19:26:30,513 ERROR: Exception on /search [GET] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\microblog\app\main\routes.py", line 187, in search
+    posts, total = Post.search(
+AttributeError: type object 'Post' has no attribute 'search'
+2022-10-12 19:28:25,857 INFO: Microblog startup [in D:\microblog\app\__init__.py:89]
+2022-10-12 19:28:53,535 ERROR: Exception on /search [GET] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\microblog\app\main\routes.py", line 187, in search
+    posts, total = Post.search(
+  File "D:\microblog\app\models.py", line 95, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "D:\microblog\app\search.py", line 23, in query_index
+    search = current_app.elasticsearch.search(
+  File "D:\microblog\venv\lib\site-packages\elasticsearch\_sync\client\utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "D:\microblog\venv\lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3770, in search
+    return self.perform_request(  # type: ignore[return-value]
+  File "D:\microblog\venv\lib\site-packages\elasticsearch\_sync\client\_base.py", line 286, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "D:\microblog\venv\lib\site-packages\elastic_transport\_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "D:\microblog\venv\lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x00000216C5593A30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it))
+2022-10-12 22:56:31,010 INFO: Microblog startup [in D:\microblog\app\__init__.py:89]
+2022-10-12 22:56:59,987 ERROR: Exception on /search [GET] [in D:\microblog\venv\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\microblog\app\main\routes.py", line 187, in search
+    posts, total = Post.search(
+  File "D:\microblog\app\models.py", line 95, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "D:\microblog\app\search.py", line 23, in query_index
+    search = current_app.elasticsearch.search(
+  File "D:\microblog\venv\lib\site-packages\elasticsearch\_sync\client\utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "D:\microblog\venv\lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3770, in search
+    return self.perform_request(  # type: ignore[return-value]
+  File "D:\microblog\venv\lib\site-packages\elasticsearch\_sync\client\_base.py", line 286, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "D:\microblog\venv\lib\site-packages\elastic_transport\_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "D:\microblog\venv\lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionTimeout: Connection timed out

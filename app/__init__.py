@@ -37,7 +37,7 @@ def create_app(config_class=Config):
 
     app.elasticsearch = (
         Elasticsearch([app.config["ELASTICSEARCH_URL"]])
-        if app.config["ELASTICSEARCH"]
+        if app.config["ELASTICSEARCH_URL"]
         else None
     )
 
